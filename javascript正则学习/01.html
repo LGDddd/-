@@ -1,0 +1,89 @@
+<div class="root">
+  hfhvdhvbdasfabfhafadgf
+</div>
+<script>
+/**
+第一节 取出数字
+*/
+// let gd = 'abdjasdasdbjasdasd 123mnasnasdam,msda213'
+// console.log(gd.match(/\d/g).join(''))
+// g 代表全局 \d 代表数字
+
+/**
+第二节 是否包含 c 字母
+*/
+// let gd = 'www.baidu.com'
+// console.log(/c/.test(gd))
+
+/**
+第三节 声明正则的方式
+*/
+// 1
+// var gd = 'ldasdabafa'
+// var reg1 = /u/;
+// var reg2 = new RegExp('u', 'g')
+// console.log(reg1.test(gd))
+// console.log(reg2.test(gd))
+
+// 2
+// var regC = prompt('请输入正则表达式')
+// var reg = new RegExp(regC,'g')
+// var ele = document.querySelector('.root')
+// ele.innerHTML = ele.innerHTML.replace(reg, search => {
+//   return '<span style="color: red;">'+ search +'</span>'
+// })
+
+/**
+第四节 选择符 | 原子组 ()
+*/
+// var gd = 'daxia'
+// var reg = /a|@/ // 匹配 a 或者 @
+// console.log(reg.test(gd))
+
+// var tel1 = '010-9999999'
+// var tel2 = '020-99999999'
+// var reg1 = /^(010|020)\-\d{7,8}/
+// 这个正则表示 匹配以010或者020开头然后 - 字符连接7或者8位的连续数字
+// ^ 以什么开头    [] 原子表    () 原子组    | 或者    \d 连续数字  \w 连续的字母数字
+// console.log(reg1.test(tel1), reg1.test(tel2))
+
+/**
+第五节 [] 原子表
+*/
+// var reg = /[1231adasdas]/
+// 原子表自动分割匹配字符 里面每个字符都代表或者 [123]  = (1|2|3)
+
+
+/**
+第六节 转义符 \
+*/
+// 1
+// var num = 12.23
+// var reg = /\d+\.+\d/
+// console.log('\\d+\\.+\\d') // ===== \d+\.+\d
+// var reg1 = new RegExp('\\d+\\.+\\d')
+// console.log(reg1.toString() === reg.toString())
+// console.log(reg.test(num))
+
+// 2
+// var url = 'http://www.baidu.com'
+// var reg = /^(http|https):\/\/\w+\.+\w+\.+\w/
+// console.log(reg.test(url))
+
+/**
+第七节 边界限定
+*/
+// + 表示匹配前面的子表达式一次或者多次
+// var reg = /^(123)+(@)+[a-z]{7,8}$/ // 以123开头中间含有@在连接7-8位的小写字母
+// var str1 = '123123@@abcefghi'
+// var str2 = '123@abcefg'
+// var str3 = '123@abcefghig'
+// console.log(reg.test(str1)) // true
+// console.log(reg.test(str2)) // false
+// console.log(reg.test(str3)) // false
+
+
+/**
+第八节 数值与空白字符
+*/
+</script>
